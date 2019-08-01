@@ -1,14 +1,13 @@
 import React from 'react';
-import './App.css';
 
 import Card from './components/Card';
+import data from './data/cards'
+
 
 function App() {
-  return (
-    <div className="App">
-      <Card />
-    </div>
-  );
+  const Cards = data.map(datum => <Card datum={datum}>{datum.text}</Card>);
+
+  return <div className="App">{Cards}</div>;
 }
 
 export default App;
